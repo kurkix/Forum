@@ -1,0 +1,32 @@
+﻿@model Forum.Models.TablolarBirlesim
+@{
+    ViewBag.Title = "Index";
+}
+
+@*<div class="container-fluid">
+    <div class="ustmenu">*@
+        <div class="benimcontainer">
+        @foreach(var kategori in Model.Kategoriler)
+        {
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4>@kategori.KategoriAdi</h4>
+                </div>
+                <div class="panel-body">
+
+                                @foreach (var altkategori in kategori.altKategoriler.ToList())
+                                {
+                                    <div class="container">
+                                        <div class="col-md-4 altkategoriler">
+                                            <h3><a href="#">@altkategori.altKategorilerAd</a><br /><small>@altkategori.altKategorilerAciklama</small></h3>
+                                        </div>
+                                        <div class="col-md-4"></div>
+                                        <div class="col-md-4"></div>
+                                    </div>
+                                }
+                </div>
+            </div>
+        }
+        </div>
+    @*</div>
+</div>*@
