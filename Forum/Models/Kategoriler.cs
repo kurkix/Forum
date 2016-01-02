@@ -13,6 +13,6 @@ namespace Forum.Models
         public int KategorilerID { get; set; }
         public string KategoriAdi { get; set; }
         public string KategoriAciklama { get; set; }
-        public ICollection<Konular> Konu { get; set; }
+        public ICollection<altKategoriler> altKategoriler { get; set; }
     }
 }

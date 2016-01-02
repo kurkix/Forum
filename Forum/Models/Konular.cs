@@ -12,8 +12,8 @@ namespace Forum.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int KonularID { get; set; }
         public string Baslik { get; set; }
-        public string İcerik { get; set; }
-        public virtual Kategoriler Kategoriler { get; set; }
+        public string Icerik { get; set; }
+        public virtual altKategoriler altKategori { get; set; }
         public virtual Kullanicilar Kullanicilar { get; set; }
     }
 }
