@@ -5,10 +5,13 @@
 
 @*<div class="container-fluid">
     <div class="ustmenu">*@
+
+<div class="benimcontainer"><span class="glyphicon glyphicon-home"></span> <span class="glyphicon glyphicon-menu-right"></span> Forum</div>
+<br />
         <div class="benimcontainer">
         @foreach(var kategori in Model.Kategoriler)
         {
-            <div class="panel panel-default">
+            <div class="panel panel-info">
                 <div class="panel-heading">
                     <h4>@kategori.KategoriAdi</h4>
                 </div>
@@ -17,11 +20,12 @@
                                 @foreach (var altkategori in kategori.altKategoriler.ToList())
                                 {
                                     <div class="container">
-                                        <div class="col-md-4 altkategoriler">
-                                            <h3><a href="#">@altkategori.altKategorilerAd</a><br /><small>@altkategori.altKategorilerAciklama</small></h3>
+                                        <div class="col-md-1"><img src="~/Resim/desen1.jpg" class="img-responsive usttenbosluk" /></div>
+                                        <div class="col-md-5 altkategoriler">
+                                            <h4><a href="#" style="text-decoration:none">@altkategori.altKategorilerAd</a><br /><small>@altkategori.altKategorilerAciklama</small></h4>
                                         </div>
-                                        <div class="col-md-4"></div>
-                                        <div class="col-md-4"></div>
+                                        <div class="col-md-2"><h5>5 <small>Konu</small></h5></div>
+                                        <div class="col-md-4"><h5><small>Son Mesaj:<a href="#"> Foruma Hoşgeldiniz</a></small></h5></div>
                                     </div>
                                 }
                 </div>
